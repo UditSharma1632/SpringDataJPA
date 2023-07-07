@@ -57,23 +57,39 @@ class ProductRepositoryTest {
     @Test
     void testSaveAll(){
         Product product2 = new Product();
-        product2.setName("Test 2");
-        product2.setDescription("testing 2");
-        product2.setPrice(BigDecimal.valueOf(220.9));
-        product2.setSku("unit 2");
+        product2.setName("Test 3");
+        product2.setDescription("testing 3");
+        product2.setPrice(BigDecimal.valueOf(330));
+        product2.setSku("unit 3");
         product2.setActive(true);
-        product2.setImageUrl("png2");
+        product2.setImageUrl("png3");
 
         Product product3 = new Product();
-        product3.setName("Test 3");
-        product3.setDescription("testing 3");
-        product3.setPrice(BigDecimal.valueOf(330.9));
-        product3.setSku("unit 3");
+        product3.setName("Test 4");
+        product3.setDescription("testing 4");
+        product3.setPrice(BigDecimal.valueOf(440.9));
+        product3.setSku("unit 4");
         product3.setActive(true);
-        product3.setImageUrl("png3");
+        product3.setImageUrl("png4");
+
+        Product product4 = new Product();
+        product4.setName("Test 5");
+        product4.setDescription("testing 5");
+        product4.setPrice(BigDecimal.valueOf(550.9));
+        product4.setSku("unit 5");
+        product4.setActive(true);
+        product4.setImageUrl("png5");
+
+        Product product5 = new Product();
+        product5.setName("Test 6");
+        product5.setDescription("testing 6");
+        product5.setPrice(BigDecimal.valueOf(660.9));
+        product5.setSku("unit 6");
+        product5.setActive(true);
+        product5.setImageUrl("png6");
 
         // Here we create a list of product objects using List.of method
-        productRepository.saveAll(List.of(product2, product3));
+        productRepository.saveAll(List.of(product2, product3, product4, product5));
     }
 
     @Test
@@ -131,7 +147,5 @@ class ProductRepositoryTest {
         boolean result = productRepository.existsById(id);
         System.out.println(result);
     }
-
-
 
 }
